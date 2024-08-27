@@ -1,11 +1,12 @@
 # views.py
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Tablero
 #from .models import Tarea
 
 def mensajes_recibidos(request):
 # Se interactúa con el modelo para obtener las tareas pendientes
-#ver_tareas_pendientes = Tarea.objects.filter(estado='pendiente')
+    mensajes_recibidos = Tablero.objects.filter(remitente='mariano')
 # Se pasa la lista de tareas a la plantilla
-#return render(request, 'tareas/pendientes.html', {'tareas': tareas_pendientes})
+    return render(request, 'mensajesRecibidos.html', {'mensajes': mensajes_recibidos})
     return HttpResponse("hola") 
