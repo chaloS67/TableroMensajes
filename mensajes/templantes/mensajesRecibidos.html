@@ -7,9 +7,10 @@
 <body>
 <h1>mensaje</h1>
 <ul>
-{% for mensaje in mensajes %}
+ {% for mensaje in mensajes %}
 <li>{{ mensaje.texto}} </li>
-   <li>Remitente : {{ mensaje.remitente}} </li> <li> Destinatario {{ mensaje.destinatario}}    </li>
+   <li>fecha : {{ mensaje.fecha}} </li>
+ <li>Remitente : {{ mensaje.remitente}} </li> <li> Destinatario {{ mensaje.destinatario}}</li>
 {% endfor %}
 </ul>
 </body>
